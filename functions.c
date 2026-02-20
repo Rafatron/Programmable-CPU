@@ -1,7 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <math.h>
 
 char * ITS(int num, int bits) { //int to string (bit)
     char * string = calloc(bits+1, sizeof(char));
@@ -12,3 +9,4 @@ char * ITS(int num, int bits) { //int to string (bit)
 
     return string;
 }
+
