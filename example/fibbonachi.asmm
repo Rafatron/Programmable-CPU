@@ -1,0 +1,15 @@
+MOV 1 0; //current number of fibbonachi sequence
+MOV 0 1; //last number of the fibbonachi sequence
+MOV 0 2; //permanent zero as to move numbers with add or sum
+MOV 0 3; //cell to store previous fibbonachi numbers
+;
+ADD 3 0 2; //move the current fibbonachi number to cell 3
+SUB 4 0 3; //substract current fibbonachi number from its storing cell, it can only happen once per iteration
+JPN 13;    //do it so we may push it to the stack once, if sub is zero go to line 13
+ADD 0 0 1; //now that the current fib number is stored its time to find the next by adding the current and previous
+ADD 1 3 2; //move the current fibbonachi number to the plance where the last fib number is stored
+JMP 6;     //jump to line 6 in order to repeat the cycle
+;
+DISP 0;    //display current fibbonachi number
+JMP 9;     //jumb back to line 9
+EOF;
